@@ -1,10 +1,10 @@
-#**Reflection: Finding Lane Lines on the Road**
+# **Reflection: Finding Lane Lines on the Road**
 
 
-##Marco Pennacchiotti
+## Marco Pennacchiotti
 
 
-###Pipeline
+### Pipeline
 
 
 The pipeline for finding lane lines includes the following steps:
@@ -31,7 +31,7 @@ the length of its line. This got better results. In the final system I however d
 The results of the two approaches were  almost identical, and I therefore decided to go ahead with the latter solution.
 
 
-###Shortcomings and Improvements
+### Shortcomings and Improvements
 
 The solution I proposed relies on linear regression with degree 1, i.e. lanes can only be modeled by straight lines. This is a limitation because roads with curves, as in the challenge.mp4 video, cannot be modeled accurately. I have tried to solve this problem by allowing regression with a degree 2 polynomial fit. However this solution resulted in more problems than improvements, as parts of the videos with straight lanes would be subjected to alterations. An improvement that I did not explore is to actually model curves  starting with a set of predefined equations that describe prototypical curves.
 
